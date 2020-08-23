@@ -27,12 +27,6 @@
 </template>
 
 <style scoped>
-.container-fluid {
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: auto;
-  margin-left: auto;
-}
 .navbarOne {
   height: 70px;
   background-color: #ffffff;
