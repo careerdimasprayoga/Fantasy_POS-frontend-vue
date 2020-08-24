@@ -61,7 +61,7 @@
                       img-top
                       class="custom-card"
                     >
-                      <b-card-text class="custom-card-text-name font-book">Coffee Latte</b-card-text>
+                      <b-card-text class="custom-card-text-name font-book">{{name}}</b-card-text>
                       <b-card-text class="custom-card-text-price font-medium">Rp. 15.000</b-card-text>
                     </b-card>
                   </b-col>
@@ -125,6 +125,29 @@
     </b-container>
   </div>
 </template>
+
+<script>
+import axios from 'axios'
+
+export default {
+  name: 'Home',
+  created() {
+    this.get_products()
+  },
+  methods: {
+    get_products() {
+      axios
+        .get('http://127.0.0.1:3009/product')
+        .then((response) => {
+          console.log(response)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    }
+  }
+}
+</script>
 
 <style scoped>
 /* Global */
